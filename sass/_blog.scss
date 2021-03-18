@@ -1,0 +1,63 @@
+.blog {
+    padding: 90px 0 120px;
+    .header-image {
+        min-height: 224px;
+        border-radius: 8px;
+    }
+    .blog-image {
+        height: auto;
+        max-height: 340px;
+        border-radius: 6px;
+        width: 100%;
+    }
+    p {
+        font-size: $h5-font-size;
+        font-weight: normal;
+    }
+    .blog-link {
+        color: $default;
+        text-decoration: none;
+    }
+    .blog-category {
+        font-weight: 600;
+        color: $primary;
+        margin-top: 32px;
+    }
+    .blog-pagination {
+        justify-content: center;
+        li:first-child {
+            visibility: hidden;
+            margin-right: auto;
+        }
+        li:last-child {
+            margin-left: auto;
+            ::before {
+                position: absolute;
+                content: '';
+                width: 16px;
+                height: 16px;
+                top: 16px;
+                right: -10px;
+                background-image: url('../assets/images/icons/arrow-next-blue-icon.png');
+                background-repeat: no-repeat;
+            }
+        }
+        .page-item.active .page-link {
+            background-color: transparent;
+            color:#1F1E1E;
+        }
+        .page-link {
+            border: none;
+            color: $primary;
+            font-weight: $font-weight-bold;
+            font-size: $middle-font-size;
+            &:focus {
+                box-shadow: none;
+            }
+            &:hover {
+                background-color: transparent;
+                color: #1F1E1E;
+            }
+        }
+    }
+}

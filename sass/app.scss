@@ -1,0 +1,14 @@
+// Import Sass file
+@import 'font';
+@import 'variables';
+@import 'type';
+@import 'styles';
+@import 'responsive';
+@import 'header';
+@import 'footer';
+@import 'home';
+@import 'blog';
+@import 'blog-post';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';

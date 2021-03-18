@@ -1,0 +1,51 @@
+.font-12 {
+    font-size: $small-font-size !important;
+}
+.blog-download {
+    background-image: url('../assets/images/download@2x.png');
+    background-size: 100% 100%;
+    padding: 200px 0 110px 200px;
+    margin-top: 112px;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    p {
+        font-size: $h5-font-size;
+        line-height: 28px;
+        color: $white;
+    }
+    .social-button {
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 16px;
+        .btn-download {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            width: 180px;
+            height: 64px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #FFFFFF;
+            border-radius: 12px;
+            p {
+                line-height: 17px;
+            }
+            .small-text {
+                font-size: $small-font-size;
+                line-height: 13px;
+                font-weight: 500;
+                margin: 0;
+                color: $white;
+                text-align: left;
+            }
+            .large-text {
+                font-size: $h5-font-size;
+                line-height: 17px;
+                text-align: left;
+                color: $white;
+                font-weight: 500;
+                margin: 0;
+            }
+        }
+    }
+}
