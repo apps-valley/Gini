@@ -759,3 +759,12 @@ export default {
   }
 }
 </script>
+<style>
+#__nuxt {
+  font-family: "Archivo", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #606a73;
+}
+</style>
