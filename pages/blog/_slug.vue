@@ -336,11 +336,11 @@ export default {
 
   computed: {
     ...mapGetters({
-      blogList: 'getBlogList'
+      blogList: 'blog/getBlogList'
     })
   },
   created () {
-    this.$store.dispatch('fetchBlogList')
+    this.$store.dispatch('blog/fetchBlogList')
     this.getPost()
     // console.log('Hello', this.$route.params)
   },
