@@ -19,7 +19,7 @@
                 >
                   <div class="mr-3">
                     <img
-                      src="../assets/images/icons/apple-icon-blue@2x.png"
+                      src="@/assets/images/icons/apple-icon-blue@2x.png"
                       alt="apple logo"
                       width="24"
                       height="24"
@@ -36,7 +36,7 @@
                 >
                   <div class="mr-3">
                     <img
-                      src="../assets/images/icons/google-icon-blue@2x.png"
+                      src="@/assets/images/icons/google-icon-blue@2x.png"
                       alt="google play logo"
                       width="24"
                       height="24"
@@ -59,12 +59,12 @@
           >
             <img
               class="mobile"
-              src="../assets/images/iphone-drop-shadow-2@2x.png"
+              src="@/assets/images/iphone-drop-shadow-2@2x.png"
               alt=""
             >
             <img
               class="lg-md"
-              src="../assets/images/iphone-no-drop-shadow@2x.png"
+              src="@/assets/images/iphone-no-drop-shadow@2x.png"
               alt=""
             >
           </b-col>
@@ -77,23 +77,23 @@
         <div class="home-links_content">
           <img
             class="wealth-img"
-            src="../assets/images/body-wealth@2x.png"
+            src="@/assets/images/body-wealth@2x.png"
             alt=""
           >
           <img
             class="chicago-img"
-            src="../assets/images/my-dentist-chicago@2x.png"
+            src="@/assets/images/my-dentist-chicago@2x.png"
             alt=""
           >
-          <img class="nyc-img" src="../assets/images/spice-nyc@2x.png" alt="">
+          <img class="nyc-img" src="@/assets/images/spice-nyc@2x.png" alt="">
           <img
             class="nerds-img"
-            src="../assets/images/lsd-nerds@2x.png"
+            src="@/assets/images/lsd-nerds@2x.png"
             alt=""
           >
           <img
             class="lottery-img"
-            src="../assets/images/illinois-lottery@2x.png"
+            src="@/assets/images/illinois-lottery@2x.png"
             alt=""
           >
         </div>
@@ -125,23 +125,23 @@
         <div class="home-links_content">
           <img
             class="wealth-img"
-            src="../assets/images/body-wealth@2x.png"
+            src="@/assets/images/body-wealth@2x.png"
             alt=""
           >
           <img
             class="chicago-img"
-            src="../assets/images/my-dentist-chicago@2x.png"
+            src="@/assets/images/my-dentist-chicago@2x.png"
             alt=""
           >
-          <img class="nyc-img" src="../assets/images/spice-nyc@2x.png" alt="">
+          <img class="nyc-img" src="@/assets/images/spice-nyc@2x.png" alt="">
           <img
             class="nerds-img"
-            src="../assets/images/lsd-nerds@2x.png"
+            src="@/assets/images/lsd-nerds@2x.png"
             alt=""
           >
           <img
             class="lottery-img"
-            src="../assets/images/illinois-lottery@2x.png"
+            src="@/assets/images/illinois-lottery@2x.png"
             alt=""
           >
         </div>
@@ -212,7 +212,7 @@
           </b-col>
           <b-col md="6" class="home-content_screen" order="1" order-md="2">
             <img
-              src="../assets/images/iphone-screenshots/brand-consulting@2x.png"
+              src="@/assets/images/iphone-screenshots/brand-consulting@2x.png"
               alt=""
             >
           </b-col>
@@ -220,7 +220,7 @@
         <b-row id="website-app">
           <b-col md="6" class="home-content_screen">
             <img
-              src="../assets/images/iphone-screenshots/websitesandapps-iphone@2x.png"
+              src="@/assets/images/iphone-screenshots/websitesandapps-iphone@2x.png"
               alt=""
             >
           </b-col>
@@ -304,7 +304,7 @@
           </b-col>
           <b-col md="6" class="home-content_screen" order="1" order-md="2">
             <img
-              src="../assets/images/iphone-screenshots/photo-editing-iphone@2x.png"
+              src="@/assets/images/iphone-screenshots/photo-editing-iphone@2x.png"
               alt=""
             >
           </b-col>
@@ -312,7 +312,7 @@
         <b-row id="caption-copy">
           <b-col md="6" class="home-content_screen">
             <img
-              src="../assets/images/iphone-screenshots/caption-writing-iphone@2x.png"
+              src="@/assets/images/iphone-screenshots/caption-writing-iphone@2x.png"
               alt=""
             >
           </b-col>
@@ -396,7 +396,7 @@
           </b-col>
           <b-col md="6" class="home-content_screen" order="1" order-md="2">
             <img
-              src="../assets/images/iphone-screenshots/social-media-management@2x.png"
+              src="@/assets/images/iphone-screenshots/social-media-management@2x.png"
               alt=""
             >
           </b-col>
@@ -451,7 +451,7 @@
               >
                 <div class="mr-3">
                   <img
-                    src="../assets/images/icons/apple-icon@2x.png"
+                    src="@/assets/images/icons/apple-icon@2x.png"
                     alt="apple logo"
                     width="24"
                     height="24"
@@ -468,7 +468,7 @@
               >
                 <div class="mr-3">
                   <img
-                    src="../assets/images/icons/google-icon@2x.png"
+                    src="@/assets/images/icons/google-icon@2x.png"
                     alt="google play logo"
                     width="24"
                     height="24"
@@ -492,7 +492,7 @@
               Download GINI and make every post count!
             </p>
             <img
-              src="../assets/images/isometric@2x.png"
+              src="@/assets/images/isometric@2x.png"
               alt=""
               class="my-4 phone-img"
             >
@@ -503,7 +503,7 @@
               >
                 <div class="mr-3">
                   <img
-                    src="../assets/images/icons/apple-icon@2x.png"
+                    src="@/assets/images/icons/apple-icon@2x.png"
                     alt="apple logo"
                     width="24"
                     height="24"
@@ -520,7 +520,7 @@
               >
                 <div class="mr-3">
                   <img
-                    src="../assets/images/icons/google-icon@2x.png"
+                    src="@/assets/images/icons/google-icon@2x.png"
                     alt="google play logo"
                     width="24"
                     height="24"
@@ -557,7 +557,7 @@
             </b-col>
             <b-col md="6">
               <img
-                src="../assets/images/book-cover@2x.png"
+                src="@/assets/images/book-cover@2x.png"
                 alt=""
                 class="book-image"
               >
@@ -568,7 +568,7 @@
           <b-row class="book-wrapper">
             <b-col cols="12">
               <img
-                src="../assets/images/book-cover-lg@2x.png"
+                src="@/assets/images/book-cover-lg@2x.png"
                 alt=""
                 class="book-image"
               >
@@ -596,22 +596,22 @@
 </template>
 
 <script>
-import ServiceCard from '../components/cards/HomeServicesCardComponent'
-import PeopleCard from '../components/cards/PeopleTalkCardComponent'
+
+import brandingIcon from '@/assets/images/icons/branding-icon@2x.png'
+import webappsIcon from '@/assets/images/icons/webapps-icon@2x.png'
+import photoEditIcon from '@/assets/images/icons/photo-edit-icon@2x.png'
+import captionIcon from '@/assets/images/icons/caption-icon@2x.png'
+import socialIcon from '@/assets/images/icons/social-icon@2x.png'
+
+import avatar1 from '@/assets/images/avatars/avatar1@2x.png'
+import avatar2 from '@/assets/images/avatars/avatar2@2x.png'
+import avatar3 from '@/assets/images/avatars/avatar3@2x.png'
+import avatar4 from '@/assets/images/avatars/avatar4@2x.png'
+import avatar5 from '@/assets/images/avatars/avatar5@2x.png'
+import avatar6 from '@/assets/images/avatars/avatar6@2x.png'
 import PhoneCard from '../components/cards/PhoneSubmitComponent'
-
-import brandingIcon from '../assets/images/icons/branding-icon@2x.png'
-import webappsIcon from '../assets/images/icons/webapps-icon@2x.png'
-import photoEditIcon from '../assets/images/icons/photo-edit-icon@2x.png'
-import captionIcon from '../assets/images/icons/caption-icon@2x.png'
-import socialIcon from '../assets/images/icons/social-icon@2x.png'
-
-import avatar1 from '../assets/images/avatars/avatar1@2x.png'
-import avatar2 from '../assets/images/avatars/avatar2@2x.png'
-import avatar3 from '../assets/images/avatars/avatar3@2x.png'
-import avatar4 from '../assets/images/avatars/avatar4@2x.png'
-import avatar5 from '../assets/images/avatars/avatar5@2x.png'
-import avatar6 from '../assets/images/avatars/avatar6@2x.png'
+import PeopleCard from '../components/cards/PeopleTalkCardComponent'
+import ServiceCard from '../components/cards/HomeServicesCardComponent'
 
 export default {
   name: 'Home',

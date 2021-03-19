@@ -2,7 +2,7 @@
   <div id="blog-post" class="blog-post">
     <b-container>
       <b-row class="mb-5 d-sm-flex d-none blog-post_info">
-        <b-col cols="12">
+        <b-col cols="12 text-center">
           <b-breadcrumb :items="breadcrumb" />
           <h1 class="blog-post_title text-left mb-4">
             {{ oneBlog.title }}
@@ -26,7 +26,7 @@
             </div>
             <div class="mr-4">
               <img
-                src="../assets/images/icons/date-icon@2x.png"
+                src="@/assets/images/icons/date-icon@2x.png"
                 alt=""
                 class="mr-2"
                 width="24"
@@ -36,7 +36,7 @@
             </div>
             <div class="mr-4">
               <img
-                src="../assets/images/icons/read_time-icon@2x.png"
+                src="@/assets/images/icons/read_time-icon@2x.png"
                 alt=""
                 class="mr-2"
                 width="24"
@@ -65,7 +65,7 @@
           <div class="d-flex justify-content-start align-items-center mb-4">
             <div class="mr-4">
               <img
-                src="../assets/images/icons/date-icon@2x.png"
+                src="@/assets/images/icons/date-icon@2x.png"
                 alt=""
                 class="mr-2"
                 width="24"
@@ -75,7 +75,7 @@
             </div>
             <div class="mr-4">
               <img
-                src="../assets/images/icons/read_time-icon@2x.png"
+                src="@/assets/images/icons/read_time-icon@2x.png"
                 alt=""
                 class="mr-2"
                 width="24"
@@ -164,7 +164,7 @@
         <b-col md="7" offset-md="3">
           <div class="d-sm-flex d-none align-items-start">
             <img
-              src="../assets/images/avatars/avatar1@2x.png"
+              src="@/assets/images/avatars/avatar1@2x.png"
               class="mr-3"
               width="80"
               height="80"
@@ -184,7 +184,7 @@
           </div>
           <div class="d-sm-none d-block">
             <img
-              src="../assets/images/avatars/avatar1@2x.png"
+              src="@/assets/images/avatars/avatar1@2x.png"
               class="mb-3"
               width="80"
               height="80"
@@ -235,7 +235,7 @@
             >
               <div class="mr-3">
                 <img
-                  src="../assets/images/icons/apple-icon@2x.png"
+                  src="@/assets/images/icons/apple-icon@2x.png"
                   alt="apple logo"
                   width="24"
                   height="24"
@@ -252,7 +252,7 @@
             >
               <div class="mr-3">
                 <img
-                  src="../assets/images/icons/google-icon@2x.png"
+                  src="@/assets/images/icons/google-icon@2x.png"
                   alt="google play logo"
                   width="24"
                   height="24"
@@ -272,11 +272,11 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import Chip from '../components/ChipComponent'
-import SubscribeForm from '../components/SubscribeFormComponent'
-import defaultAvatar from '../assets/images/avatars/avatar1@2x.png'
+import defaultAvatar from '@/assets/images/avatars/avatar1@2x.png'
+import Chip from '@/components/ChipComponent'
+import SubscribeForm from '@/components/SubscribeFormComponent'
 
-import { butter } from '../buttercms'
+import { butter } from '@/buttercms'
 
 export default {
   name: 'BlogPost',

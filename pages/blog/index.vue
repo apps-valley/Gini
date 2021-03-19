@@ -68,7 +68,7 @@
             >
               <div class="mr-3">
                 <img
-                  src="../assets/images/icons/apple-icon@2x.png"
+                  src="@/assets/images/icons/apple-icon@2x.png"
                   alt="apple logo"
                   width="24"
                   height="24"
@@ -85,7 +85,7 @@
             >
               <div class="mr-3">
                 <img
-                  src="../assets/images/icons/google-icon@2x.png"
+                  src="@/assets/images/icons/google-icon@2x.png"
                   alt="google play logo"
                   width="24"
                   height="24"
