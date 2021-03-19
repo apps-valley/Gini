@@ -31,7 +31,8 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/google-analytics'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -39,7 +40,14 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     '@nuxtjs/sitemap',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    ['nuxt-facebook-pixel-module', {
+      /* module options */
+      track: 'PageView',
+      pixelId: '2673709689322783',
+      autoPageView: true,
+      disabled: false
+    }]
   ],
 
   // specify module rules for css and scss
