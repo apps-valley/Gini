@@ -17,16 +17,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .chip-content {
-        display: inline;
-        border: 1px solid #DDE1EA;
-        box-sizing: border-box;
-        border-radius: 50px;
-        padding: 8px 16px;
-        span {
-            font-size: 1em;
-            color: #808B95;
-            text-transform: uppercase;
-        }
-    }
+.chip-content {
+  display: inline;
+  border: 1px solid #dde1ea;
+  box-sizing: border-box;
+  border-radius: 50px;
+  padding: 8px 16px;
+  span {
+    font-size: 1em;
+    color: #808b95;
+    text-transform: uppercase;
+  }
+}
 </style>

@@ -13,7 +13,7 @@
       dismissible
       variant="success"
       class="phone-alert"
-      @dismissed="dismissCountDown=0"
+      @dismissed="dismissCountDown = 0"
       @dismiss-count-down="countDownChanged"
     >
       Added phone number successfully!
@@ -32,7 +32,8 @@ export default {
   },
   props: {
     cardData: {
-      type: Object
+      type: Object,
+      default: () => {}
     }
   },
   data () {
@@ -45,22 +46,21 @@ export default {
   },
   computed: {
     ...mapGetters({
-      isSuccess: 'getIsSuccessPhone'
+      isSuccess: 'blog/getIsSuccessPhone'
     })
-  },
-  mounted () {
-    console.log(this.$store, '----')
   },
   methods: {
     phoneSubmit () {
-      this.$store.dispatch('insertPhoneNumber', {
-        number: this.phoneNumber
-      }).then(() => {
-        if (this.isSuccess) {
-          this.buttonText = 'Thank you'
-          this.showAlert()
-        }
-      })
+      this.$store
+        .dispatch('blog/insertPhoneNumber', {
+          number: this.phoneNumber
+        })
+        .then(() => {
+          if (this.isSuccess) {
+            this.buttonText = 'Thank you'
+            this.showAlert()
+          }
+        })
     },
     countDownChanged (dismissCountDown) {
       this.dismissCountDown = dismissCountDown
@@ -73,38 +73,38 @@ export default {
 </script>
 
 <style lang="scss">
-    .phone-card {
-        display: inline-flex;
-        flex-direction: column;
-        background: #FFFFFF;
-        box-shadow: 0px 0px 80px rgba(171, 171, 171, 0.15);
-        border-radius: 12px;
-        padding: 32px;
-        width: 407px;
-        button {
-            padding: 24px 107px;
-            font-size: 1.286em;
-            font-weight: 600;
-            line-height: 16px;
-        }
-        .phone-input {
-            height: 56px;
-            margin-bottom: 24px;
-            input {
-                height: 56px;
-                font-size: 1.286em;
-                font-weight: 500;
-                line-height: 16px;
-                color: #1F1E1E;
-            }
-            .country-selector__country-flag {
-                height: 30px;
-            }
-        }
-        .phone-alert {
-            position: fixed;
-            top: 0;
-            right: 0;
-        }
+.phone-card {
+  display: inline-flex;
+  flex-direction: column;
+  background: #ffffff;
+  box-shadow: 0px 0px 80px rgba(171, 171, 171, 0.15);
+  border-radius: 12px;
+  padding: 32px;
+  width: 407px;
+  button {
+    padding: 24px 107px;
+    font-size: 1.286em;
+    font-weight: 600;
+    line-height: 16px;
+  }
+  .phone-input {
+    height: 56px;
+    margin-bottom: 24px;
+    input {
+      height: 56px;
+      font-size: 1.286em;
+      font-weight: 500;
+      line-height: 16px;
+      color: #1f1e1e;
     }
+    .country-selector__country-flag {
+      height: 30px;
+    }
+  }
+  .phone-alert {
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+}
 </style>

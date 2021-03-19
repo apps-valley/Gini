@@ -134,7 +134,9 @@
           </div>
         </b-col>
         <b-col lg="7" md="9" class="blog-post-content">
+          <!-- eslint-disable vue/no-v-html -->
           <div v-html="oneBlog.body" />
+          <!--eslint-enable-->
           <SubscribeForm />
           <div class="d-sm-none d-block">
             <h5 class="text-center">
@@ -279,6 +281,7 @@ import { butter } from '../buttercms'
 export default {
   name: 'BlogPost',
   components: { Chip, SubscribeForm },
+  layout: 'blog',
   data () {
     return {
       defaultAvatar,

@@ -2,7 +2,7 @@
   <div id="blog" class="blog">
     <b-container>
       <b-row v-if="firstBlog">
-        <b-col cols="12">
+        <b-col cols="12" class="text-center">
           <b-link :to="'/blog/' + firstBlog.slug" class="blog-link">
             <img class="img-fluid header-image" :src="firstBlog.image" alt="">
             <p class="blog-category text-left">
@@ -108,6 +108,7 @@ import { mapGetters } from 'vuex'
 
 export default {
   name: 'Blog',
+  layout: 'blog',
   metaInfo () {
     return {
       title: 'BLOG | GINI',
@@ -142,7 +143,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      blogList: 'getBlogList'
+      blogList: 'blog/getBlogList'
     }),
     firstBlog () {
       if (this.blogList.length >= 1) {
@@ -158,7 +159,7 @@ export default {
   },
 
   created () {
-    this.$store.dispatch('fetchBlogList')
+    this.$store.dispatch('blog/fetchBlogList')
   },
   methods: {
     formatCompat (date) {

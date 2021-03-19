@@ -53,12 +53,12 @@ export default {
   },
   computed: {
     ...mapGetters({
-      isSuccess: 'getIsSuccessEmail'
+      isSuccess: 'blog/getIsSuccessEmail'
     })
   },
   methods: {
     emailSubmit () {
-      this.$store.dispatch('insertEmail', {
+      this.$store.dispatch('blog/insertEmail', {
         email: this.email
       }).then(() => {
         if (this.isSuccess) {
