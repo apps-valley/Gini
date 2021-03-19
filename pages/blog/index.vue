@@ -107,6 +107,8 @@
 import { mapGetters } from 'vuex'
 
 export default {
+  name: 'Blog',
+  layout: 'blog',
   data () {
     return {
       perPage: 9,

@@ -4,7 +4,7 @@
       <b-container class="h-100">
         <b-navbar toggleable="md" type="light">
           <b-navbar-brand href="/">
-            <img src="../../assets/images/logo@2x.png" alt="logo image">
+            <img src="@/assets/images/logo@2x.png" alt="logo image">
             <b-navbar-nav>
               <b-nav-item href="blog" class="brand-text">
                 BLOG
