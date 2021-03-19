@@ -706,6 +706,120 @@ export default {
       }
     }
   },
+  // metaInfo () {
+  //   return {
+  //     title: 'Home | GINI - Build your brand with the help of experts',
+  //     meta: [
+  //       {
+  //         name: 'description',
+  //         content:
+  //           'GINI makes it is easy for creators to find professional help with branding, websites & app development, social media management, photo editing, and caption writing.'
+  //       },
+  //       { property: 'Home | GINI - Build your brand with the help of experts' },
+  //       { property: 'og:site_name', content: 'GINI' },
+  //       {
+  //         property: 'og:description',
+  //         content:
+  //           'GINI makes it is easy for creators to find professional help with branding, websites & app development, social media management, photo editing, and caption writing.'
+  //       },
+  //       { property: 'og:type', content: 'website' },
+  //       {
+  //         property: 'og:url',
+  //         content: 'https://gini.pro'
+  //       },
+  //       {
+  //         property: 'og:image',
+  //         content:
+  //           'https://firebasestorage.googleapis.com/v0/b/angelina-cnnahw.appspot.com/o/images%2Fpromo-images%2Fgini-share-preview-image.png?alt=media&token=216a92e4-100b-480b-8e5f-9a133f9bab9e'
+  //       }
+  //     ]
+  //   }
+  // }
+  head () {
+    return {
+      title: 'GINI - Build your brand easily with the help of experts',
+      description: 'GINI makes it is easy for creators to find professional help with branding, websites & app development, social media management, photo editing, and caption writing.',
+      image: 'https://firebasestorage.googleapis.com/v0/b/angelina-cnnahw.appspot.com/o/images%2Fpromo-images%2Fgini-share-preview-image.png?alt=media&token=216a92e4-100b-480b-8e5f-9a133f9bab9e',
+      meta: [
+        { charset: 'utf-8' },
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1'
+        },
+        {
+          hid: 'title',
+          name: 'title',
+          content: this.title
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.title
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.description
+        },
+        {
+          hid: 'twitter:image',
+          name: 'twitter:image',
+          content: this.image
+        },
+        {
+          hid: 'twitter:image:alt',
+          name: 'twitter:image:alt',
+          content: this.title
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.title
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.description
+        },
+        {
+          hid: 'og:site_name',
+          name: 'og:site_name',
+          content: 'GINI'
+        },
+        {
+          hid: 'og:type',
+          name: 'og:type',
+          content: 'website'
+        },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          content: 'https://www.gininow.com'
+        },
+
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.image
+        },
+        {
+          hid: 'og:image:secure_url',
+          property: 'og:image:secure_url',
+          content: this.image
+        },
+        {
+          hid: 'og:image:alt',
+          property: 'og:image:alt',
+          content: this.title
+        }
+      ]
+    }
+  },
   computed: {
     currentRouteName () {
       return this.$router.name
@@ -726,35 +840,6 @@ export default {
         this.scroll = this.$refs.sticky.offsetTop
         this.$refs.content.style = `transform: translateX(-${this.scroll}px);`
       }
-    }
-  },
-  metaInfo () {
-    return {
-      title: 'Home | GINI - Build your brand with the help of experts',
-      meta: [
-        {
-          name: 'description',
-          content:
-            'GINI makes it is easy for creators to find professional help with branding, websites & app development, social media management, photo editing, and caption writing.'
-        },
-        { property: 'Home | GINI - Build your brand with the help of experts' },
-        { property: 'og:site_name', content: 'GINI' },
-        {
-          property: 'og:description',
-          content:
-            'GINI makes it is easy for creators to find professional help with branding, websites & app development, social media management, photo editing, and caption writing.'
-        },
-        { property: 'og:type', content: 'website' },
-        {
-          property: 'og:url',
-          content: 'https://gini.pro'
-        },
-        {
-          property: 'og:image',
-          content:
-            'https://firebasestorage.googleapis.com/v0/b/angelina-cnnahw.appspot.com/o/images%2Fpromo-images%2Fgini-share-preview-image.png?alt=media&token=216a92e4-100b-480b-8e5f-9a133f9bab9e'
-        }
-      ]
     }
   }
 }

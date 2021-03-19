@@ -107,38 +107,95 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  name: 'Blog',
-  layout: 'blog',
-  metaInfo () {
-    return {
-      title: 'BLOG | GINI',
-      meta: [
-        {
-          name: 'description',
-          content: "Learn how to start and build a quality brand with content, how-tos, interviews, and case studies from branding professionals. As creators, it's up to us to change the world. You may have a great idea and a great product, but need some help with branding. We're here to help."
-        },
-        { property: 'og:title', content: 'BLOG | GINI' },
-        { property: 'og:site_name', content: 'GINI' },
-        {
-          property: 'og:description',
-          content: "Learn how to start and build a quality brand with content, how-tos, interviews, and case studies from branding professionals. As creators, it's up to us to change the world. You may have a great idea and a great product, but need some help with branding. We're here to help."
-        },
-        { property: 'og:type', content: 'blog' },
-        {
-          property: 'og:url',
-          content: 'https://gini.pro/blog'
-        },
-        {
-          property: 'og:image',
-          content: 'https://firebasestorage.googleapis.com/v0/b/angelina-cnnahw.appspot.com/o/images%2Fpromo-images%2Fgini-share-preview-image.png?alt=media&token=216a92e4-100b-480b-8e5f-9a133f9bab9e'
-        }
-      ]
-    }
-  },
   data () {
     return {
       perPage: 9,
       currentPage: 1
+    }
+  },
+  head () {
+    return {
+      title: 'GINI Blog - Learn from the pros, then grow like a pro.',
+      description: 'Learn how to start and build a quality brand with content, how-tos, interviews, and case studies from branding professionals. As creators, it is up to us to change the world. You may have a great idea and a great product, but need some help with branding. We are happy to help!',
+      image: 'https://firebasestorage.googleapis.com/v0/b/angelina-cnnahw.appspot.com/o/test%2FBLOG%20(3).png?alt=media&token=a810f118-5f71-4bf6-85b3-9f5c55bc32d0',
+      meta: [
+        { charset: 'utf-8' },
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1'
+        },
+        {
+          hid: 'title',
+          name: 'title',
+          content: this.title
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.title
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.description
+        },
+        {
+          hid: 'twitter:image',
+          name: 'twitter:image',
+          content: this.image
+        },
+        {
+          hid: 'twitter:image:alt',
+          name: 'twitter:image:alt',
+          content: this.title
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.title
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.description
+        },
+        {
+          hid: 'og:site_name',
+          name: 'og:site_name',
+          content: 'GINI'
+        },
+        {
+          hid: 'og:type',
+          name: 'og:type',
+          content: 'article'
+        },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          content: 'https://www.gininow.com/blog'
+        },
+
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.image
+        },
+        {
+          hid: 'og:image:secure_url',
+          property: 'og:image:secure_url',
+          content: this.image
+        },
+        {
+          hid: 'og:image:alt',
+          property: 'og:image:alt',
+          content: this.title
+        }
+      ]
     }
   },
   computed: {

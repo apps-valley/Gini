@@ -1,14 +1,15 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'gini',
+    titleTemplate: '%s - ' + 'GINI - Build your brand easily with the help of experts',
+    title: 'GINI' || '',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: 'GINI makes it is easy for creators to find professional help with branding, websites & app development, social media management, photo editing, and caption writing.' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
@@ -35,7 +36,9 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/bootstrap
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/google-analytics'
   ],
 
   // specify module rules for css and scss
@@ -57,6 +60,11 @@ export default {
   // Style resources
   styleResources: {
     scss: './scss/*.scss'
+  },
+
+  googleAnalytics: {
+    id: 'G-8DWC2P9FG1',
+    dev: false
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

@@ -306,34 +306,91 @@ export default {
       chipName: 'Marketing'
     }
   },
-
-  metaInfo () {
+  head () {
     return {
-      title: this.oneBlog.title + ' | GINI',
+      title: this.oneBlog.title,
+      description: this.oneBlog.meta_description,
+      image: this.oneBlog.featured_image,
       meta: [
+        { charset: 'utf-8' },
         {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1'
+        },
+        {
+          hid: 'title',
+          name: 'title',
+          content: this.title
+        },
+        {
+          hid: 'description',
           name: 'description',
-          content: this.oneBlog.meta_description
+          content: this.description
         },
-        { property: 'og:title', content: this.oneBlog.title + ' | GINI' },
-        { property: 'og:site_name', content: 'GINI' },
         {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.title
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.description
+        },
+        {
+          hid: 'twitter:image',
+          name: 'twitter:image',
+          content: this.image
+        },
+        {
+          hid: 'twitter:image:alt',
+          name: 'twitter:image:alt',
+          content: this.title
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.title
+        },
+        {
+          hid: 'og:description',
           property: 'og:description',
-          content: this.oneBlog.meta_description
-        },
-        { property: 'og:type', content: 'blog post' },
-        {
-          property: 'og:url',
-          content: 'https://gini.pro/blog/' + this.oneBlog.slug
+          content: this.description
         },
         {
+          hid: 'og:site_name',
+          name: 'og:site_name',
+          content: 'GINI'
+        },
+        {
+          hid: 'og:type',
+          name: 'og:type',
+          content: 'article'
+        },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          content: 'https://www.gininow.com/blog/' + this.oneBlog.slug
+        },
+
+        {
+          hid: 'og:image',
           property: 'og:image',
-          content: this.oneBlog.featured_image
+          content: this.image
+        },
+        {
+          hid: 'og:image:secure_url',
+          property: 'og:image:secure_url',
+          content: this.image
+        },
+        {
+          hid: 'og:image:alt',
+          property: 'og:image:alt',
+          content: this.title
         }
       ]
     }
   },
-
   computed: {
     ...mapGetters({
       blogList: 'getBlogList'

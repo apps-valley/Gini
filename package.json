@@ -11,6 +11,8 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
+    "@nuxtjs/google-analytics": "^2.4.0",
+    "@nuxtjs/sitemap": "^2.4.0",
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
     "buttercms": "^1.2.6",
