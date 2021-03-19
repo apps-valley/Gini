@@ -712,6 +712,7 @@ export default {
 
   head () {
     return {
+      title: 'Welcome!',
       meta: [
         { charset: 'utf-8' },
         {
