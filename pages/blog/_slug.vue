@@ -284,6 +284,9 @@ export default {
   layout: 'blog',
   data () {
     return {
+      // title: this.oneBlog.title,
+      // description: this.oneBlog.meta_description,
+      // image: this.oneBlog.featured_image,
       defaultAvatar,
       oneBlog: {
         author: {
@@ -292,7 +295,6 @@ export default {
           profile_image: ''
         }
       },
-
       breadcrumb: [
         {
           text: 'Main',
@@ -309,8 +311,6 @@ export default {
   head () {
     return {
       title: this.oneBlog.title,
-      description: this.oneBlog.meta_description,
-      image: this.oneBlog.featured_image,
       meta: [
         { charset: 'utf-8' },
         {
@@ -320,42 +320,42 @@ export default {
         {
           hid: 'title',
           name: 'title',
-          content: this.title
+          content: this.oneBlog.title
         },
         {
           hid: 'description',
           name: 'description',
-          content: this.description
+          content: this.oneBlog.meta_description
         },
         {
           hid: 'twitter:title',
           name: 'twitter:title',
-          content: this.title
+          content: this.oneBlog.title
         },
         {
           hid: 'twitter:description',
           name: 'twitter:description',
-          content: this.description
+          content: this.oneBlog.meta_description
         },
         {
           hid: 'twitter:image',
           name: 'twitter:image',
-          content: this.image
+          content: this.oneBlog.featured_image
         },
         {
           hid: 'twitter:image:alt',
           name: 'twitter:image:alt',
-          content: this.title
+          content: this.oneBlog.title
         },
         {
           hid: 'og:title',
           property: 'og:title',
-          content: this.title
+          content: this.oneBlog.title
         },
         {
           hid: 'og:description',
           property: 'og:description',
-          content: this.description
+          content: this.oneBlog.meta_description
         },
         {
           hid: 'og:site_name',
@@ -376,17 +376,17 @@ export default {
         {
           hid: 'og:image',
           property: 'og:image',
-          content: this.image
+          content: this.oneBlog.featured_image
         },
         {
           hid: 'og:image:secure_url',
           property: 'og:image:secure_url',
-          content: this.image
+          content: this.oneBlog.featured_image
         },
         {
           hid: 'og:image:alt',
           property: 'og:image:alt',
-          content: this.title
+          content: this.oneBlog.title
         }
       ]
     }
