@@ -1,14 +1,14 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+// import Vue from 'vue'
+// import Vuex from 'vuex'
 
-import BlogModule from './modules/BlogModule'
-import HomeModule from './modules/HomeModule'
+// import BlogModule from './modules/BlogModule'
+// import HomeModule from './modules/HomeModule'
 
-Vue.use(Vuex)
+// Vue.use(Vuex)
 
-export default new Vuex.Store({
-  modules: {
-    blog: BlogModule,
-    home: HomeModule
-  }
-})
+// export const store = new Vuex.Store({
+//   modules: {
+//     blog: BlogModule,
+//     home: HomeModule
+//   }
+// })

@@ -422,13 +422,15 @@
         </b-row>
         <b-row class="people-cards d-md-none d-flex">
           <div class="people-cards-wrapper">
-            <agile :dots="false">
-              <PeopleCard
-                v-for="(item, index) in peopleCardTalkData"
-                :key="index"
-                :card-data="item"
-              />
-            </agile>
+            <client-only>
+              <agile :dots="false">
+                <PeopleCard
+                  v-for="(item, index) in peopleCardTalkData"
+                  :key="index"
+                  :card-data="item"
+                />
+              </agile>
+            </client-only>
           </div>
         </b-row>
         <b-row id="giniDownload" class="blog-download home-blog-download">
@@ -594,8 +596,6 @@
 </template>
 
 <script>
-import { VueAgile } from 'vue-agile'
-
 import ServiceCard from '../components/cards/HomeServicesCardComponent'
 import PeopleCard from '../components/cards/PeopleTalkCardComponent'
 import PhoneCard from '../components/cards/PhoneSubmitComponent'
@@ -618,8 +618,7 @@ export default {
   components: {
     ServiceCard,
     PeopleCard,
-    PhoneCard,
-    agile: VueAgile
+    PhoneCard
   },
   data () {
     return {

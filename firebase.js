@@ -13,7 +13,11 @@ const firebaseConfig = {
   measurementId: 'G-8DWC2P9FG1'
 }
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig)
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig)
+} else {
+  firebase.app() // if already initialized, use that one
+}
 
 // utils
 const db = firebase.firestore()
@@ -21,7 +25,9 @@ const auth = firebase.auth()
 
 // collection references
 const blogSubscribersCollection = db.collection('blogSubscribers')
-const marketingTipsSubscribersCollection = db.collection('marketingTipsSubscribers')
+const marketingTipsSubscribersCollection = db.collection(
+  'marketingTipsSubscribers'
+)
 
 // export utils/refs
 export {

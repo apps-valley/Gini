@@ -1,66 +1,74 @@
 <template>
-    <div class="phone-card">
-        <h3 class="mb-4 pb-2">{{cardData.description}}</h3>
-        <VuePhoneNumberInput v-model="phoneNumber" class="phone-input"/>
-        <b-button pill variant="primary" @click="phoneSubmit()">{{buttonText}}</b-button>
-        <b-alert 
-            v-if="isSuccess" 
-            :show="dismissCountDown"
-            dismissible
-            variant="success"
-            @dismissed="dismissCountDown=0"
-            @dismiss-count-down="countDownChanged"
-            class="phone-alert"
-            >Added phone number successfully!
-        </b-alert>
-    </div>
+  <div class="phone-card">
+    <h3 class="mb-4 pb-2">
+      {{ cardData.description }}
+    </h3>
+    <VuePhoneNumberInput v-model="phoneNumber" class="phone-input" />
+    <b-button pill variant="primary" @click="phoneSubmit()">
+      {{ buttonText }}
+    </b-button>
+    <b-alert
+      v-if="isSuccess"
+      :show="dismissCountDown"
+      dismissible
+      variant="success"
+      class="phone-alert"
+      @dismissed="dismissCountDown=0"
+      @dismiss-count-down="countDownChanged"
+    >
+      Added phone number successfully!
+    </b-alert>
+  </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import VuePhoneNumberInput from 'vue-phone-number-input';
+import VuePhoneNumberInput from 'vue-phone-number-input'
 
 export default {
-    name: 'phone-card',
-    components: {
-        VuePhoneNumberInput
-    },
-    props: {
-        cardData: {
-            type: Object
-        }
-    },
-    data() {
-        return {
-            buttonText: 'Sign up today!',
-            phoneNumber: '',
-            dismissSecs: 5,
-            dismissCountDown: 0
-        }
-    },
-    computed: {
-        ...mapGetters({
-            isSuccess: 'getIsSuccessPhone'
-        }),
-    },
-    methods: {
-        phoneSubmit() {
-            this.$store.dispatch('insertPhoneNumber', {
-                number: this.phoneNumber
-            }).then(() => {
-                if(this.isSuccess) {
-                    this.buttonText = 'Thank you'
-                    this.showAlert();
-                }
-            })
-        },
-        countDownChanged(dismissCountDown) {
-            this.dismissCountDown = dismissCountDown
-        },
-        showAlert() {
-            this.dismissCountDown = this.dismissSecs
-        }
+  name: 'PhoneCard',
+  components: {
+    VuePhoneNumberInput
+  },
+  props: {
+    cardData: {
+      type: Object
     }
+  },
+  data () {
+    return {
+      buttonText: 'Sign up today!',
+      phoneNumber: '',
+      dismissSecs: 5,
+      dismissCountDown: 0
+    }
+  },
+  computed: {
+    ...mapGetters({
+      isSuccess: 'getIsSuccessPhone'
+    })
+  },
+  mounted () {
+    console.log(this.$store, '----')
+  },
+  methods: {
+    phoneSubmit () {
+      this.$store.dispatch('insertPhoneNumber', {
+        number: this.phoneNumber
+      }).then(() => {
+        if (this.isSuccess) {
+          this.buttonText = 'Thank you'
+          this.showAlert()
+        }
+      })
+    },
+    countDownChanged (dismissCountDown) {
+      this.dismissCountDown = dismissCountDown
+    },
+    showAlert () {
+      this.dismissCountDown = this.dismissSecs
+    }
+  }
 }
 </script>
 
