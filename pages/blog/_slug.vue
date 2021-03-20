@@ -169,7 +169,6 @@
                   ? oneBlog.author.profile_image
                   : defaultAvatar
               "
-              ,
               class="mr-3"
               width="80"
               height="80"
@@ -194,7 +193,6 @@
               :src="oneBlog.author.profile_image
                 ? oneBlog.author.profile_image
                 : defaultAvatar"
-              ,
               class="mb-3"
               width="80"
               height="80"
