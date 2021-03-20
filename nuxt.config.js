@@ -22,7 +22,8 @@ export default {
     { src: '~/plugins/vue-agile.js', mode: 'client' },
     { src: '~/plugins/vue-facebook-pixel.js' },
     { src: '~/plugins/smooth-scroll', ssr: false },
-    { src: '~/plugins/bootstrap.js' }
+    { src: '~/plugins/bootstrap.js' },
+    { src: '~/plugins/vue-phone-number-input.js' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
