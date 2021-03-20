@@ -112,14 +112,15 @@ export default {
   data () {
     return {
       perPage: 9,
-      currentPage: 1
+      currentPage: 1,
+      title: 'GINI Blog - Learn from the pros, then grow like a pro.',
+      description: 'Learn how to start and build a quality brand with content, how-tos, interviews, and case studies from branding professionals. As creators, it is up to us to change the world. You may have a great idea and a great product, but need some help with branding. We are happy to help!',
+      image: 'https://firebasestorage.googleapis.com/v0/b/angelina-cnnahw.appspot.com/o/test%2FBLOG%20(3).png?alt=media&token=a810f118-5f71-4bf6-85b3-9f5c55bc32d0'
     }
   },
   head () {
     return {
       title: 'GINI Blog - Learn from the pros, then grow like a pro.',
-      description: 'Learn how to start and build a quality brand with content, how-tos, interviews, and case studies from branding professionals. As creators, it is up to us to change the world. You may have a great idea and a great product, but need some help with branding. We are happy to help!',
-      image: 'https://firebasestorage.googleapis.com/v0/b/angelina-cnnahw.appspot.com/o/test%2FBLOG%20(3).png?alt=media&token=a810f118-5f71-4bf6-85b3-9f5c55bc32d0',
       meta: [
         { charset: 'utf-8' },
         {

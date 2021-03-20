@@ -625,6 +625,9 @@ export default {
       rateValue: 5,
       scroll: 0,
       scrolling: false,
+      title: 'Build your brand easily with the help of experts',
+      description: 'GINI makes it is easy for creators to find professional help with branding, websites & app development, social media management, photo editing, and caption writing.',
+      image: 'https://firebasestorage.googleapis.com/v0/b/angelina-cnnahw.appspot.com/o/images%2Fpromo-images%2Fgini-share-preview-image.png?alt=media&token=216a92e4-100b-480b-8e5f-9a133f9bab9e',
       servicesData: [
         {
           id: '#brand-consulting',
@@ -706,40 +709,10 @@ export default {
       }
     }
   },
-  // metaInfo () {
-  //   return {
-  //     title: 'Home | GINI - Build your brand with the help of experts',
-  //     meta: [
-  //       {
-  //         name: 'description',
-  //         content:
-  //           'GINI makes it is easy for creators to find professional help with branding, websites & app development, social media management, photo editing, and caption writing.'
-  //       },
-  //       { property: 'Home | GINI - Build your brand with the help of experts' },
-  //       { property: 'og:site_name', content: 'GINI' },
-  //       {
-  //         property: 'og:description',
-  //         content:
-  //           'GINI makes it is easy for creators to find professional help with branding, websites & app development, social media management, photo editing, and caption writing.'
-  //       },
-  //       { property: 'og:type', content: 'website' },
-  //       {
-  //         property: 'og:url',
-  //         content: 'https://gini.pro'
-  //       },
-  //       {
-  //         property: 'og:image',
-  //         content:
-  //           'https://firebasestorage.googleapis.com/v0/b/angelina-cnnahw.appspot.com/o/images%2Fpromo-images%2Fgini-share-preview-image.png?alt=media&token=216a92e4-100b-480b-8e5f-9a133f9bab9e'
-  //       }
-  //     ]
-  //   }
-  // }
+
   head () {
     return {
-      title: 'GINI - Build your brand easily with the help of experts',
-      description: 'GINI makes it is easy for creators to find professional help with branding, websites & app development, social media management, photo editing, and caption writing.',
-      image: 'https://firebasestorage.googleapis.com/v0/b/angelina-cnnahw.appspot.com/o/images%2Fpromo-images%2Fgini-share-preview-image.png?alt=media&token=216a92e4-100b-480b-8e5f-9a133f9bab9e',
+      title: 'Welcome!',
       meta: [
         { charset: 'utf-8' },
         {

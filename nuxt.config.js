@@ -30,8 +30,10 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/vue-agile.js', mode: 'client' },
+    { src: '~/plugins/vue-facebook-pixel.js' },
     { src: '~/plugins/smooth-scroll', ssr: false },
-    { src: '~/plugins/bootstrap.js' }
+    { src: '~/plugins/bootstrap.js' },
+    { src: '~/plugins/vue-phone-number-input.js' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -40,7 +42,8 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/google-analytics'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -48,7 +51,14 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     '@nuxtjs/sitemap',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    ['nuxt-facebook-pixel-module', {
+      /* module options */
+      track: 'PageView',
+      pixelId: '2673709689322783',
+      autoPageView: true,
+      disabled: false
+    }]
   ],
 
   // specify module rules for css and scss
