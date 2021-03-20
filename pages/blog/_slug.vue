@@ -163,41 +163,53 @@
       <b-row class="mt-5">
         <b-col md="7" offset-md="3">
           <div class="d-sm-flex d-none align-items-start">
-            <img
-              src="@/assets/images/avatars/avatar1@2x.png"
+            <b-img
+              :src="
+                oneBlog.author.profile_image
+                  ? oneBlog.author.profile_image
+                  : defaultAvatar
+              "
+              ,
               class="mr-3"
               width="80"
               height="80"
               alt=""
-            >
+            />
             <div>
               <h5 class="text-left">
-                Kristin Watson
+                {{
+                  oneBlog.author.first_name + " " + oneBlog.author.last_name
+                }}
               </h5>
               <p class="text-left" style="font-size: 1.14em">
-                Content Strategist at GINI where she manages all things Adapt
-                and supports larger content initiatives. When she's not at work,
-                you can find Kristin cheering for the Dodgers or rewatching
+                Content Strategist at GINI where he manages all things Adapt
+                and supports larger content initiatives. When he's not at work,
+                you can find {{ oneBlog.author.first_name }} cheering for the Dodgers or rewatching
                 "Avengers: Endgame" (again).
               </p>
             </div>
           </div>
           <div class="d-sm-none d-block">
-            <img
-              src="@/assets/images/avatars/avatar1@2x.png"
+            <b-img
+              :src="oneBlog.author.profile_image
+                ? oneBlog.author.profile_image
+                : defaultAvatar"
+              ,
               class="mb-3"
               width="80"
               height="80"
               alt=""
-            >
+            />
             <h5 class="mb-3">
-              Kristin Watson
+              {{
+                oneBlog.author.first_name + " " + oneBlog.author.last_name
+              }}
             </h5>
             <p class="text-left" style="font-size: 1.14em">
-              Content Strategist at GINI where she manages all things Adapt and
-              supports larger content initiatives. When she's not at work, you
-              can find Kristin cheering for the Dodgers or rewatching "Avengers:
-              Endgame" (again).
+              Content Strategist at GINI where he manages all things Adapt
+              and supports larger content initiatives. When he's not at work,
+              you can find {{ oneBlog.author.first_name }} cheering for the Dodgers or rewatching
+              "Avengers: Endgame" (again).
             </p>
           </div>
         </b-col>
