@@ -1,162 +1,169 @@
 .blog-post {
-    padding: 52px 0 180px 0;
-    &_info {
-        span {
-            font-size: $h5-font-size;
-            line-height: 16px;
-        }
-        .avatar {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-        }
+  padding: 52px 0 180px 0;
+  &_info {
+    span {
+      font-size: $h5-font-size;
+      line-height: 16px;
     }
-    .breadcrumb {
-        background-color: $white;
-        padding-left: 0;
-        .breadcrumb-item {
-            padding-left: 0;
-            a, span {
-                font-size: $h5-font-size;
-                line-height: 16px;
-                color: $default;
-                text-decoration: none;
-            }
-            &.active {
-                color: $default;
-            }
-        }
-        .breadcrumb-item + .breadcrumb-item::before {
-            content: '';
-            background-image: url('../assets/images/icons/arrow_next_icon@2x.png');
-            background-repeat: no-repeat;
-            background-size: contain;
-            width: 16px;
-            height: 16px;
-            margin: 2px 8px;
-            padding: 0;
-        }
+    .avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
     }
-    .blog-image {
-        height: auto;
-        max-height: 340px;
-        border-radius: 6px;
-        width: 100%;
+  }
+  .breadcrumb {
+    background-color: $white;
+    padding-left: 0;
+    .breadcrumb-item {
+      padding-left: 0;
+      a,
+      span {
+        font-size: $h5-font-size;
+        line-height: 16px;
+        color: $default;
+        text-decoration: none;
+      }
+      &.active {
+        color: $default;
+      }
     }
-    .blog-category {
-        font-weight: 600;
-        color: $primary;
-        margin-top: 32px;
+    .breadcrumb-item + .breadcrumb-item::before {
+      content: "";
+      background-image: url("../assets/images/icons/arrow_next_icon@2x.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 16px;
+      height: 16px;
+      margin: 2px 8px;
+      padding: 0;
     }
-    .header-image {
-        height:auto;
-        border-radius: 8px;
-        margin-top: 16px;
+  }
+  .blog-image {
+    height: auto;
+    max-height: 340px;
+    border-radius: 6px;
+    width: 100%;
+  }
+  .blog-category {
+    font-weight: 600;
+    color: $primary;
+    margin-top: 32px;
+  }
+  .header-image {
+    height: auto;
+    border-radius: 8px;
+    margin-top: 16px;
+  }
+  .blog-image {
+    height: auto;
+    max-height: 340px;
+    border-radius: 6px;
+  }
+  .social-icons {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    .social-icon {
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 32px;
+      height: 32px;
     }
-    .blog-image {
-        height: auto;
-        max-height: 340px;
-        border-radius: 6px;
+    .twitter-icon {
+      background-image: url("../assets/images/icons/twitter-icon@2x.png");
+      &.active,
+      &:hover {
+        background-image: url("../assets/images/icons/twitter-icon-active@2x.png");
+      }
     }
-    .social-icons {
-        display: flex;
-        align-items: center;
-        margin-top: 16px;
-        .social-icon {
-            background-size: contain;
-            background-repeat: no-repeat;
-            width: 32px;
-            height: 32px;
-        }
-        .twitter-icon {
-            background-image: url('../assets/images/icons/twitter-icon@2x.png');
-            &.active, &:hover {
-                background-image: url('../assets/images/icons/twitter-icon-active@2x.png');
-            }
-        }
-        .facebook-icon {
-            background-image: url('../assets/images/icons/facebook-icon@2x.png');
-            &.active, &:hover {
-                background-image: url('../assets/images/icons/facebook-icon-active@2x.png');
-            }
-        }
-        .linkedin-icon {
-            background-image: url('../assets/images/icons/linkedin-icon@2x.png');
-            &.active, &:hover {
-                background-image: url('../assets/images/icons/linkedin-icon-active@2x.png');
-            }
-        }
-        .email-icon {
-            background-image: url('../assets/images/icons/email-icon@2x.png');
-            &.active, &:hover {
-                background-image: url('../assets/images/icons/email-icon-active@2x.png');
-            }
-        }
-        .social-text {
-            margin-left: 16px;
-            font-size: $h5-font-size;
-        }
+    .facebook-icon {
+      background-image: url("../assets/images/icons/facebook-icon@2x.png");
+      &.active,
+      &:hover {
+        background-image: url("../assets/images/icons/facebook-icon-active@2x.png");
+      }
     }
-    .blog-post-content {
-        p {
-            font-size: $h3-font-size;
-            text-align: left !important;
-            margin-bottom: 3rem !important;
-        }
+    .linkedin-icon {
+      background-image: url("../assets/images/icons/linkedin-icon@2x.png");
+      &.active,
+      &:hover {
+        background-image: url("../assets/images/icons/linkedin-icon-active@2x.png");
+      }
+    }
+    .email-icon {
+      background-image: url("../assets/images/icons/email-icon@2x.png");
+      &.active,
+      &:hover {
+        background-image: url("../assets/images/icons/email-icon-active@2x.png");
+      }
+    }
+    .social-text {
+      margin-left: 16px;
+      font-size: $h5-font-size;
+    }
+  }
+  .blog-post-content {
+    p {
+      font-size: $h3-font-size;
+      text-align: left !important;
+      margin-bottom: 3rem !important;
+    }
 
-        h2, h2 span {
-            text-align: left !important;
-            margin-bottom: 1.5rem !important;
-            font-size: $h2-font-size;
-            line-height: 1.2;
-            margin-top: 0;
-        }
-        h3{
-            text-align: left;
-        }
-        h2.text-primary, h2.text-primary span{
-            text-align: left !important;
-            margin-bottom: 1.5rem !important;
-            font-size: 2.0rem;
-            line-height: 1.2;
-            margin-top: 0;
-            color: #7D6AF4 !important;
-        }
-        h3{
-            text-align: left;
-        }
-        hr{
-            margin-top: 1rem;
-            // margin-bottom: 1rem;
-            border: 0;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-            box-sizing: content-box;
-            height: 0;
-            overflow: visible;
-            margin-bottom: 3rem !important;
-        }
-        ul {
-            padding: 12px;
-            margin-bottom: 48px;
-            list-style: none;
-            li {
-                text-align: left;
-                padding-left: 4px;
-                margin-bottom: 16px;
-                font-size: $h3-font-size;;
-                &::before {
-                    content: '\2022';
-                    color: $primary;
-                    font-size: 1.5rem;
-                    font-weight: bold;
-                    display: inline-block;
-                    width: 1em;
-                    margin-left: -1em;
-                }
-            }
-        }
-        .schdule-text {
-            font-size: $large-font-size;
-        }
+    h2,
+    h2 span {
+      text-align: left !important;
+      margin-bottom: 1.5rem !important;
+      font-size: $h2-font-size;
+      line-height: 1.2;
+      margin-top: 0;
     }
+    h3 {
+      text-align: left;
+    }
+    h2.text-primary,
+    h2.text-primary span {
+      text-align: left !important;
+      margin-bottom: 1.5rem !important;
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-top: 0;
+      color: #7d6af4 !important;
+    }
+    h3 {
+      text-align: left;
+    }
+    hr {
+      margin-top: 1rem;
+      // margin-bottom: 1rem;
+      border: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      box-sizing: content-box;
+      height: 0;
+      overflow: visible;
+      margin-bottom: 3rem !important;
+    }
+    ul {
+      padding: 12px;
+      margin-bottom: 48px;
+      list-style: none;
+      li {
+        text-align: left;
+        padding-left: 4px;
+        margin-bottom: 16px;
+        font-size: $h3-font-size;
+        &::before {
+          content: "\2022";
+          color: $primary;
+          font-size: 1.5rem;
+          font-weight: bold;
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em;
+        }
+      }
+    }
+    .schdule-text {
+      font-size: $large-font-size;
+    }
+  }
 }

@@ -1,5 +1,8 @@
 import { butter } from '~/buttercms'
-import { blogSubscribersCollection, marketingTipsSubscribersCollection } from '~/firebase'
+import {
+  blogSubscribersCollection,
+  marketingTipsSubscribersCollection
+} from '~/firebase'
 
 const state = () => ({
   blogList: [],
@@ -16,50 +19,51 @@ const getters = {
 const actions = {
   fetchBlogList ({ commit }) {
     return new Promise((resolve, reject) => {
-      butter.post.list().then(
-        (res) => {
+      butter.post
+        .list()
+        .then((res) => {
           if (res && res.statusText === 'OK') {
             commit('setBlogList', res.data.data)
             resolve(res)
           } else {
             commit('setBlogList', [])
           }
-        }
-      ).catch(
-        err => reject(err)
-      )
+        })
+        .catch(err => reject(err))
     })
   },
   insertPhoneNumber ({ commit }, phone) {
     return new Promise((resolve, reject) => {
-      marketingTipsSubscribersCollection.doc('marketingTipsSubscribers').set({ phoneNumber: phone }).then(
-        (doc) => {
-          commit('setPhoneNumber', true)
-          resolve(doc)
-        }
-      ).catch(
-        (err) => {
-          // eslint-disable-next-line no-console
-          console.log('failed')
-          reject(err)
-        }
-      )
+      marketingTipsSubscribersCollection.get().then((snap) => {
+        const size = snap.size // will return the collection size
+        marketingTipsSubscribersCollection
+          .doc(`marketingTipsSubscribers_${size + 1}`)
+          .set({ phoneNumber: phone })
+          .then((doc) => {
+            commit('setPhoneNumber', true)
+            resolve(doc)
+          })
+          .catch((err) => {
+            // eslint-disable-next-line no-console
+            console.log('failed')
+            reject(err)
+          })
+      })
     })
   },
   insertEmail ({ commit }, email) {
     return new Promise((resolve, reject) => {
-      blogSubscribersCollection.add({ email }).then(
-        (doc) => {
+      blogSubscribersCollection
+        .add({ email })
+        .then((doc) => {
           commit('setEmail', true)
           resolve(doc)
-        }
-      ).catch(
-        (err) => {
+        })
+        .catch((err) => {
           // eslint-disable-next-line no-console
           console.log('failed')
           reject(err)
-        }
-      )
+        })
     })
   }
 }
