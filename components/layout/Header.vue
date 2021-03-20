@@ -6,8 +6,10 @@
           <b-navbar-brand href="/">
             <img src="@/assets/images/logo@2x.png" alt="logo image">
             <b-navbar-nav>
-              <b-nav-item href="blog" class="brand-text">
-                BLOG
+              <b-nav-item class="brand-text">
+                <NuxtLink to="/blog">
+                  BLOG
+                </NuxtLink>
               </b-nav-item>
             </b-navbar-nav>
           </b-navbar-brand>

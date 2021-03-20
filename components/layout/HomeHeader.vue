@@ -3,11 +3,13 @@
     <client-only>
       <b-container class="h-100">
         <b-navbar toggleable="md" type="light">
-          <b-navbar-brand href="blog">
-            <img src="@/assets/images/logo@2x.png" alt="logo image">
+          <b-navbar-brand>
+            <NuxtLink to="/">
+              <img src="@/assets/images/logo@2x.png" alt="logo image">
+            </NuxtLink>
           </b-navbar-brand>
 
-          <b-navbar-toggle target="nav-collapse" />
+          <!-- <b-navbar-toggle target="nav-collapse" /> -->
           <b-collapse id="nav-collapse" is-nav>
             <!-- Right aligned nav items -->
             <b-navbar-nav class="ml-auto align-items-center">

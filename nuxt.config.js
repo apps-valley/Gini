@@ -1,7 +1,8 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - ' + 'GINI - Build your brand easily with the help of experts',
+    titleTemplate:
+      '%s - ' + 'GINI - Build your brand easily with the help of experts',
     title: 'GINI' || '',
     htmlAttrs: {
       lang: 'en'
@@ -9,7 +10,16 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'GINI makes it is easy for creators to find professional help with branding, websites & app development, social media management, photo editing, and caption writing.' }
+      {
+        name: 'google-site-verification',
+        content: '09jk7SDHUhdiNkU1xv_RNbTcaEoT-Ig1xHMIr1nuE24'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'GINI makes it is easy for creators to find professional help with branding, websites & app development, social media management, photo editing, and caption writing.'
+      }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
