@@ -121,12 +121,11 @@
             <span class="social-text">Twitter</span>
           </div>
           <ShareNetwork
+            v-if="oneBlog.title"
             network="facebook"
             :url="oneBlog.url"
             :title="oneBlog.title"
             :description="oneBlog.meta_description"
-            quote="The hot reload is so fast it\'s near instant. - Evan You"
-            hashtags="vuejs,vite"
           >
             <div class="social-icons">
               <span class="social-icon facebook-icon active" />
@@ -325,6 +324,10 @@ export default {
       chipName: 'Marketing'
     }
   },
+  created () {
+    this.$store.dispatch('blog/fetchBlogList')
+    this.getPost()
+  },
   head () {
     return {
       title: this.oneBlog.title,
@@ -411,12 +414,11 @@ export default {
   computed: {
     ...mapGetters({
       blogList: 'blog/getBlogList'
-    })
-  },
-  created () {
-    this.$store.dispatch('blog/fetchBlogList')
-    this.getPost()
-    // console.log('Hello', this.$route.params)
+    }),
+    enableOneBlogRendering () {
+      console.log(this.oneBlog, Object.values(this.oneBlog), 'hey')
+      return 1
+    }
   },
   methods: {
     formatCompat (date) {
@@ -450,9 +452,6 @@ export default {
           // eslint-disable-next-line no-console
           console.log(err)
         })
-    },
-    faceBookPost () {
-      console.log(this.oneBlog, 'hey')
     }
   }
 }
