@@ -25,7 +25,10 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['~/sass/app.scss'],
+  css: [
+    { src: '~/sass/app.scss', lang: 'sass' },
+    { src: '~/../node_modules/vue-phone-number-input/dist/vue-phone-number-input.css', lang: 'css' }
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -53,13 +56,16 @@ export default {
     '@nuxtjs/sitemap',
     '@nuxtjs/google-analytics',
     'vue-social-sharing/nuxt',
-    ['nuxt-facebook-pixel-module', {
-      /* module options */
-      track: 'PageView',
-      pixelId: '2673709689322783',
-      autoPageView: true,
-      disabled: false
-    }]
+    [
+      'nuxt-facebook-pixel-module',
+      {
+        /* module options */
+        track: 'PageView',
+        pixelId: '2673709689322783',
+        autoPageView: true,
+        disabled: false
+      }
+    ]
   ],
 
   // specify module rules for css and scss
@@ -89,5 +95,21 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {
+    extractCSS: { allChunks: true }
+    // optimization: {
+    //   splitChunks: {
+    //     cacheGroups: {
+    //       styles: {
+    //         name: 'styles',
+    //         test: /\.(css|vue)$/,
+    //         chunks: 'all',
+    //         enforce: true
+    //       }
+    //     }
+    //   }
+    // }
+  },
+  srcDir: 'src',
+  buildDir: 'functions/.nuxt'
 }
