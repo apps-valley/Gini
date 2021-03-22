@@ -63,6 +63,12 @@
     display: flex;
     align-items: center;
     margin-top: 16px;
+    &:hover {
+      cursor: pointer;
+      .social-text {
+        text-decoration: underline;
+      }
+    }
     .social-icon {
       background-size: contain;
       background-repeat: no-repeat;

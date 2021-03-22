@@ -120,10 +120,19 @@
             <span class="social-icon twitter-icon" />
             <span class="social-text">Twitter</span>
           </div>
-          <div class="social-icons">
-            <span class="social-icon facebook-icon active" />
-            <span class="social-text">Facebook</span>
-          </div>
+          <ShareNetwork
+            network="facebook"
+            :url="oneBlog.url"
+            :title="oneBlog.title"
+            :description="oneBlog.meta_description"
+            quote="The hot reload is so fast it\'s near instant. - Evan You"
+            hashtags="vuejs,vite"
+          >
+            <div class="social-icons">
+              <span class="social-icon facebook-icon active" />
+              <span class="social-text">Facebook</span>
+            </div>
+          </ShareNetwork>
           <div class="social-icons">
             <span class="social-icon linkedin-icon" />
             <span class="social-text">Linkedin</span>
@@ -176,38 +185,36 @@
             />
             <div>
               <h5 class="text-left">
-                {{
-                  oneBlog.author.first_name + " " + oneBlog.author.last_name
-                }}
+                {{ oneBlog.author.first_name + " " + oneBlog.author.last_name }}
               </h5>
               <p class="text-left" style="font-size: 1.14em">
-                Content Strategist at GINI where he manages all things Adapt
-                and supports larger content initiatives. When he's not at work,
-                you can find {{ oneBlog.author.first_name }} cheering for the Dodgers or rewatching
-                "Avengers: Endgame" (again).
+                Content Strategist at GINI where he manages all things Adapt and
+                supports larger content initiatives. When he's not at work, you
+                can find {{ oneBlog.author.first_name }} cheering for the
+                Dodgers or rewatching "Avengers: Endgame" (again).
               </p>
             </div>
           </div>
           <div class="d-sm-none d-block">
             <b-img
-              :src="oneBlog.author.profile_image
-                ? oneBlog.author.profile_image
-                : defaultAvatar"
+              :src="
+                oneBlog.author.profile_image
+                  ? oneBlog.author.profile_image
+                  : defaultAvatar
+              "
               class="mb-3"
               width="80"
               height="80"
               alt=""
             />
             <h5 class="mb-3">
-              {{
-                oneBlog.author.first_name + " " + oneBlog.author.last_name
-              }}
+              {{ oneBlog.author.first_name + " " + oneBlog.author.last_name }}
             </h5>
             <p class="text-left" style="font-size: 1.14em">
-              Content Strategist at GINI where he manages all things Adapt
-              and supports larger content initiatives. When he's not at work,
-              you can find {{ oneBlog.author.first_name }} cheering for the Dodgers or rewatching
-              "Avengers: Endgame" (again).
+              Content Strategist at GINI where he manages all things Adapt and
+              supports larger content initiatives. When he's not at work, you
+              can find {{ oneBlog.author.first_name }} cheering for the Dodgers
+              or rewatching "Avengers: Endgame" (again).
             </p>
           </div>
         </b-col>
@@ -443,6 +450,9 @@ export default {
           // eslint-disable-next-line no-console
           console.log(err)
         })
+    },
+    faceBookPost () {
+      console.log(this.oneBlog, 'hey')
     }
   }
 }

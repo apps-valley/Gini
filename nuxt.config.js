@@ -52,6 +52,7 @@ export default {
     'bootstrap-vue/nuxt',
     '@nuxtjs/sitemap',
     '@nuxtjs/google-analytics',
+    'vue-social-sharing/nuxt',
     ['nuxt-facebook-pixel-module', {
       /* module options */
       track: 'PageView',
