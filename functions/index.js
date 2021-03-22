@@ -20,11 +20,14 @@ const readyPromise = nuxt
     process.exit(1);
   });
 
-const handleRequestasync = async function (req, res) {
+// eslint-disable-next-line no-console
+async function handleRequest(req, res) {
   if (!isReady) {
+    // eslint-disable-next-line no-console
     await readyPromise;
   }
   res.set("Cache-Control", "public, max-age=1, s-maxage=1");
+  
   await nuxt.render(req, res);
 }
 
