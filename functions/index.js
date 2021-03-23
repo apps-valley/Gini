@@ -1,36 +1,33 @@
-const functions = require("firebase-functions");
-const { Nuxt } = require("nuxt");
-const express = require("express");
+const functions = require('firebase-functions')
+const { Nuxt } = require('nuxt')
+const express = require('express')
 
-const app = express();
+const app = express()
 
 const config = {
   dev: false
-};
+}
 
-const nuxt = new Nuxt(config);
+const nuxt = new Nuxt(config)
 
-let isReady = false;
+let isReady = false
 const readyPromise = nuxt
   .ready()
   .then(() => {
-    isReady = true;
+    isReady = true
   })
   .catch(() => {
-    process.exit(1);
-  });
+    process.exit(1)
+  })
 
-// eslint-disable-next-line no-console
-async function handleRequest(req, res) {
+async function handleRequest (req, res) {
   if (!isReady) {
-    // eslint-disable-next-line no-console
-    await readyPromise;
+    await readyPromise
   }
-  res.set("Cache-Control", "public, max-age=1, s-maxage=1");
-  
-  await nuxt.render(req, res);
+  res.set('Cache-Control', 'public, max-age=1, s-maxage=1')
+  await nuxt.render(req, res)
 }
 
-app.get("*", handleRequest);
-app.use(handleRequest);
-exports.nuxtssr = functions.https.onRequest(app);
+app.get('*', handleRequest)
+app.use(handleRequest)
+exports.nuxtssr = functions.https.onRequest(app)
