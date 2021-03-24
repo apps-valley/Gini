@@ -9,7 +9,7 @@
             </NuxtLink>
           </b-navbar-brand>
 
-          <!-- <b-navbar-toggle target="nav-collapse" /> -->
+          <b-navbar-toggle target="nav-collapse" />
           <b-collapse id="nav-collapse" is-nav>
             <!-- Right aligned nav items -->
             <b-navbar-nav class="ml-auto align-items-center">
