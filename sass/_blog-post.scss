@@ -76,36 +76,21 @@
       height: 32px;
     }
     .twitter-icon {
-      background-image: url("../assets/images/icons/twitter-icon@2x.png");
-      &.active,
-      &:hover {
-        background-image: url("../assets/images/icons/twitter-icon-active@2x.png");
-      }
+      background-image: url("../assets/images/icons/twitter-icon-active@2x.png");
     }
     .facebook-icon {
-      background-image: url("../assets/images/icons/facebook-icon@2x.png");
-      &.active,
-      &:hover {
-        background-image: url("../assets/images/icons/facebook-icon-active@2x.png");
-      }
+      background-image: url("../assets/images/icons/facebook-icon-active@2x.png");
     }
     .linkedin-icon {
-      background-image: url("../assets/images/icons/linkedin-icon@2x.png");
-      &.active,
-      &:hover {
-        background-image: url("../assets/images/icons/linkedin-icon-active@2x.png");
-      }
+      background-image: url("../assets/images/icons/linkedin-icon-active@2x.png");
     }
     .email-icon {
-      background-image: url("../assets/images/icons/email-icon@2x.png");
-      &.active,
-      &:hover {
-        background-image: url("../assets/images/icons/email-icon-active@2x.png");
-      }
+      background-image: url("../assets/images/icons/email-icon-active@2x.png");
     }
     .social-text {
       margin-left: 16px;
       font-size: $h5-font-size;
+      color: $default;
     }
   }
   .blog-post-content {

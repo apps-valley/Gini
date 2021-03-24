@@ -116,10 +116,17 @@
           <h5 class="text-left">
             SHARE ARTICLE
           </h5>
-          <div class="social-icons">
-            <span class="social-icon twitter-icon" />
-            <span class="social-text">Twitter</span>
-          </div>
+          <ShareNetwork
+            v-if="oneBlog.title"
+            network="twitter"
+            :url="oneBlog.url"
+            :title="oneBlog.title"
+          >
+            <div class="social-icons">
+              <span class="social-icon twitter-icon" />
+              <span class="social-text">Twitter</span>
+            </div>
+          </ShareNetwork>
           <ShareNetwork
             v-if="oneBlog.title"
             network="facebook"
@@ -128,14 +135,20 @@
             :description="oneBlog.meta_description"
           >
             <div class="social-icons">
-              <span class="social-icon facebook-icon active" />
+              <span class="social-icon facebook-icon" />
               <span class="social-text">Facebook</span>
             </div>
           </ShareNetwork>
-          <div class="social-icons">
-            <span class="social-icon linkedin-icon" />
-            <span class="social-text">Linkedin</span>
-          </div>
+          <ShareNetwork
+            v-if="oneBlog.title"
+            network="linkedin"
+            :url="oneBlog.url"
+          >
+            <div class="social-icons">
+              <span class="social-icon linkedin-icon" />
+              <span class="social-text">Linkedin</span>
+            </div>
+          </ShareNetwork>
           <div class="social-icons">
             <span class="social-icon email-icon" />
             <span class="social-text">Email</span>
@@ -324,10 +337,6 @@ export default {
       chipName: 'Marketing'
     }
   },
-  created () {
-    this.$store.dispatch('blog/fetchBlogList')
-    this.getPost()
-  },
   head () {
     return {
       title: this.oneBlog.title,
@@ -410,6 +419,10 @@ export default {
         }
       ]
     }
+  },
+  created () {
+    this.$store.dispatch('blog/fetchBlogList')
+    this.getPost()
   },
   computed: {
     ...mapGetters({
