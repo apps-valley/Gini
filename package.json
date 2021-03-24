@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "dev": "nuxt",
     "build": "nuxt build",
     "build:firebase": "yarn clean && yarn create:directory && yarn build && yarn copy && cd \"functions\" && yarn",
 

@@ -691,12 +691,12 @@ var component = Object(componentNormalizer["a" /* default */])(
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/layout/HomeHeader.vue?vue&type=template&id=05f65381&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"header home-header"},[_c('client-only',[_c('b-container',{staticClass:"h-100"},[_c('b-navbar',{attrs:{"toggleable":"md","type":"light"}},[_c('b-navbar-brand',[_c('NuxtLink',{attrs:{"to":"/"}},[_c('img',{attrs:{"src":__webpack_require__(18),"alt":"logo image"}})])],1),_vm._v(" "),_c('b-collapse',{attrs:{"id":"nav-collapse","is-nav":""}},[_c('b-navbar-nav',{staticClass:"ml-auto align-items-center"},[_c('NuxtLink',{attrs:{"to":"/blog"}},[_vm._v("\n              Blog\n            ")]),_vm._v(" "),_c('b-nav-form',{attrs:{"action":"https://admin.gininow.com"}},[_c('b-button',{staticClass:"my-2 my-lg-0 ml-0 ml-lg-3",attrs:{"pill":"","size":"sm","type":"submit"}},[_vm._v("\n                Business Login\n              ")])],1)],1)],1)],1)],1)],1)],1)}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/layout/HomeHeader.vue?vue&type=template&id=824414fc&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"header home-header"},[_c('client-only',[_c('b-container',{staticClass:"h-100"},[_c('b-navbar',{attrs:{"toggleable":"md","type":"light"}},[_c('b-navbar-brand',[_c('NuxtLink',{attrs:{"to":"/"}},[_c('img',{attrs:{"src":__webpack_require__(18),"alt":"logo image"}})])],1),_vm._v(" "),_c('b-navbar-toggle',{attrs:{"target":"nav-collapse"}}),_vm._v(" "),_c('b-collapse',{attrs:{"id":"nav-collapse","is-nav":""}},[_c('b-navbar-nav',{staticClass:"ml-auto align-items-center"},[_c('NuxtLink',{attrs:{"to":"/blog"}},[_vm._v("\n              Blog\n            ")]),_vm._v(" "),_c('b-nav-form',{attrs:{"action":"https://admin.gininow.com"}},[_c('b-button',{staticClass:"my-2 my-lg-0 ml-0 ml-lg-3",attrs:{"pill":"","size":"sm","type":"submit"}},[_vm._v("\n                Business Login\n              ")])],1)],1)],1)],1)],1)],1)],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/layout/HomeHeader.vue?vue&type=template&id=05f65381&
+// CONCATENATED MODULE: ./src/components/layout/HomeHeader.vue?vue&type=template&id=824414fc&
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/layout/HomeHeader.vue?vue&type=script&lang=js&
 //
