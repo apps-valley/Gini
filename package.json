@@ -4,16 +4,18 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "build:firebase": "yarn clean && yarn build && yarn copy && cd \"functions\" && yarn",
+    "build:firebase": "yarn clean && yarn create:directory && yarn build && yarn copy && cd \"functions\" && yarn",
 
     "clean": "yarn clean:public && yarn clean:functions && yarn clean:static",
     "clean:functions": "rimraf \"functions/node_modules\" && rimraf \"functions/.nuxt\"",
     "clean:public": "rimraf \"public/**/*.*!(md)\" && rimraf \"public/_nuxt\"",
-    "clean:static": "rimraf \"src/static/sw.js\"",
+    "clean:static": "rm src/static/sw.js",
+
+    "create:directory": "cd public && mkdir _nuxt",
 
     "copy": "yarn copy:nuxt && yarn copy:static",
-    "copy:nuxt": "xcopy \"functions\\.nuxt\\dist\\*\" \"public\\_nuxt\\\" /E /Y",
-    "copy:static": "xcopy \"src\\static\\*\" \"public\\\" /E /Y",
+    "copy:nuxt": "cp -R functions/.nuxt/dist/* public/_nuxt/",
+    "copy:static": "cp src/static/* public/",
 
     "start:firebase": "firebase serve --only functions,hosting",
 
