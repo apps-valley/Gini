@@ -118,6 +118,9 @@ export default {
       image: 'https://firebasestorage.googleapis.com/v0/b/angelina-cnnahw.appspot.com/o/test%2FBLOG%20(3).png?alt=media&token=a810f118-5f71-4bf6-85b3-9f5c55bc32d0'
     }
   },
+  async fetch ({ store }) {
+    await store.dispatch('blog/fetchBlogList')
+  },
   head () {
     return {
       title: 'GINI Blog - Learn from the pros, then grow like a pro.',
@@ -216,10 +219,6 @@ export default {
       const [, ...rest] = this.blogList
       return rest
     }
-  },
-
-  created () {
-    this.$store.dispatch('blog/fetchBlogList')
   },
   methods: {
     formatCompat (date) {

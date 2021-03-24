@@ -801,6 +801,9 @@ export default {
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
   },
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
   methods: {
     handleScroll () {
       const totalWidth = this.servicesData.length * 400

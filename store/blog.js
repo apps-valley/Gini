@@ -5,12 +5,14 @@ import {
 } from '~/firebase'
 
 const state = () => ({
+  blog: {},
   blogList: [],
   isSuccessPhone: false,
   isSuccessEmail: false
 })
 
 const getters = {
+  getBlog: state => state.blog,
   getBlogList: state => state.blogList,
   getIsSuccessPhone: state => state.isSuccessPhone,
   getIsSuccessEmail: state => state.isSuccessEmail
@@ -30,6 +32,23 @@ const actions = {
           }
         })
         .catch(err => reject(err))
+    })
+  },
+  fetchOneBlog ({ commit }, url) {
+    return new Promise((resolve, reject) => {
+      butter.post
+        .retrieve(url)
+        .then((res) => {
+          if (res && res.statusText === 'OK') {
+            commit('setOneBlog', res.data.data)
+            resolve(res)
+          } else {
+            commit('setOneBlog', {})
+          }
+        })
+        .catch((err) => {
+          reject(err)
+        })
     })
   },
   insertPhoneNumber ({ commit }, phone) {
@@ -71,6 +90,9 @@ const actions = {
 const mutations = {
   setBlogList (state, blogList) {
     state.blogList = blogList.map(blog => formatBlogList(blog))
+  },
+  setOneBlog (state, blog) {
+    state.blog = blog
   },
   setPhoneNumber (state, successFlag) {
     state.isSuccessPhone = successFlag

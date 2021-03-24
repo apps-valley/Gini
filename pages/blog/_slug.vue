@@ -310,8 +310,6 @@ import Chip from '@/components/ChipComponent'
 import SubscribeForm from '@/components/SubscribeFormComponent'
 import EmailInputModal from '@/components/EmailInputModal'
 
-import { butter } from '@/buttercms'
-
 export default {
   name: 'BlogPost',
   components: { Chip, SubscribeForm, EmailInputModal },
@@ -322,13 +320,6 @@ export default {
       // description: this.oneBlog.meta_description,
       // image: this.oneBlog.featured_image,
       defaultAvatar,
-      oneBlog: {
-        author: {
-          first_name: '',
-          last_name: '',
-          profile_image: ''
-        }
-      },
       breadcrumb: [
         {
           text: 'Main',
@@ -342,6 +333,10 @@ export default {
       chipName: 'Marketing',
       showModal: false
     }
+  },
+  async fetch ({ store, route }) {
+    await store.dispatch('blog/fetchBlogList')
+    await store.dispatch('blog/fetchOneBlog', route.params.slug)
   },
   head () {
     return {
@@ -426,13 +421,10 @@ export default {
       ]
     }
   },
-  created () {
-    this.$store.dispatch('blog/fetchBlogList')
-    this.getPost()
-  },
   computed: {
     ...mapGetters({
-      blogList: 'blog/getBlogList'
+      blogList: 'blog/getBlogList',
+      oneBlog: 'blog/getBlog'
     })
   },
   methods: {
@@ -454,19 +446,6 @@ export default {
       return (
         ms[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear()
       )
-    },
-    getPost () {
-      butter.post
-        .retrieve(this.$route.params.slug)
-        .then((res) => {
-          if (res && res.statusText === 'OK') {
-            this.oneBlog = res.data.data
-          }
-        })
-        .catch((err) => {
-          // eslint-disable-next-line no-console
-          console.log(err)
-        })
     },
     sendEmail (email) {
       this.showModal = false
