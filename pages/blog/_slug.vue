@@ -143,6 +143,7 @@
             v-if="oneBlog.title"
             network="linkedin"
             :url="oneBlog.url"
+            :title="oneBlog.title"
           >
             <div class="social-icons">
               <span class="social-icon linkedin-icon" />
