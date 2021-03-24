@@ -1,5 +1,6 @@
 <template>
   <div id="blog-post" class="blog-post">
+    <email-input-modal :show.sync="showModal" @ok="sendEmail" />
     <b-container>
       <b-row class="mb-5 d-sm-flex d-none blog-post_info">
         <b-col cols="12 text-center">
@@ -121,6 +122,7 @@
             network="twitter"
             :url="oneBlog.url"
             :title="oneBlog.title"
+            :description="oneBlog.meta_description"
           >
             <div class="social-icons">
               <span class="social-icon twitter-icon" />
@@ -144,13 +146,14 @@
             network="linkedin"
             :url="oneBlog.url"
             :title="oneBlog.title"
+            :description="oneBlog.meta_description"
           >
             <div class="social-icons">
               <span class="social-icon linkedin-icon" />
               <span class="social-text">Linkedin</span>
             </div>
           </ShareNetwork>
-          <div class="social-icons">
+          <div class="social-icons" @click="showModal=true">
             <span class="social-icon email-icon" />
             <span class="social-text">Email</span>
           </div>
@@ -305,12 +308,13 @@ import { mapGetters } from 'vuex'
 import defaultAvatar from '@/assets/images/avatars/avatar1@2x.png'
 import Chip from '@/components/ChipComponent'
 import SubscribeForm from '@/components/SubscribeFormComponent'
+import EmailInputModal from '@/components/EmailInputModal'
 
 import { butter } from '@/buttercms'
 
 export default {
   name: 'BlogPost',
-  components: { Chip, SubscribeForm },
+  components: { Chip, SubscribeForm, EmailInputModal },
   layout: 'blog',
   data () {
     return {
@@ -335,7 +339,8 @@ export default {
           href: '#'
         }
       ],
-      chipName: 'Marketing'
+      chipName: 'Marketing',
+      showModal: false
     }
   },
   head () {
@@ -428,11 +433,7 @@ export default {
   computed: {
     ...mapGetters({
       blogList: 'blog/getBlogList'
-    }),
-    enableOneBlogRendering () {
-      console.log(this.oneBlog, Object.values(this.oneBlog), 'hey')
-      return 1
-    }
+    })
   },
   methods: {
     formatCompat (date) {
@@ -466,6 +467,15 @@ export default {
           // eslint-disable-next-line no-console
           console.log(err)
         })
+    },
+    sendEmail (email) {
+      this.showModal = false
+      // this.$mail.send({
+      //   from: 'John Doe',
+      //   subject: 'Incredible',
+      //   text: 'This is an incredible test message',
+      //   to: 'johndoe@gmail.com'
+      // })
     }
   }
 }

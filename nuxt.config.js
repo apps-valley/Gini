@@ -53,6 +53,13 @@ export default {
     '@nuxtjs/sitemap',
     '@nuxtjs/google-analytics',
     'vue-social-sharing/nuxt',
+    '@nuxtjs/axios',
+    ['nuxt-mail', {
+      smtp: {
+        host: 'smtp.example.com',
+        port: 587
+      }
+    }],
     ['nuxt-facebook-pixel-module', {
       /* module options */
       track: 'PageView',
